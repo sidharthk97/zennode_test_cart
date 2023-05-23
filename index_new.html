@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopping cart</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="./js/script1.js"></script> 
+</head>
+<body>
+    <div style="width: 100%;height: 70px; background-color: black;text-align:center;padding-top: 1px;">
+        <h1 style="color: white;">Shopping Cart</h1>
+    </div>
+    
+    <div class="container">
+        <div id="product" style="margin:10px; background-color: rgb(0,0,0,0.5);padding: 5px;height: 250px;">
+        
+            <div style="display: inline-block;margin: 10px;height: 200px; width: 300px;" >
+                <img src="./img/mouse.jpg" alt="Electronic Mouse" height="100%" width="100%" >
+            </div>
+            <div style="display: inline-block;vertical-align: top;width: 700px;padding-left: 40px;">
+                <h1>Product A</h1>
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                    </span>
+                    <input type="text" class="quantity" name="quantity" class="form-control input-number" value="0" min="0" max="100" width="80px">
+                    
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <br />
+                <input type="checkbox" class="gift_tick" name="gift_tick" onchange="changeTotal()">
+                <label for="gift_tick" style="font-size: 16px;">Please Tick if you want to gift wrap each product </label>
+                
+                <br />
+                <h2 style="display: inline-block;">Price: $ <span class="price" >20</span></h2>
+				<h2 style="display: inline-block; margin-left: 280px;">Amount: $ <span class="full-price">0</span></h2>
+        
+            </div>
+        </div>
+        <div id="product" style="margin:10px; background-color: rgb(0,0,0,0.5);padding: 5px;height: 250px;">
+        
+            <div style="display: inline-block;margin: 10px;height: 200px; width: 300px;" >
+                <img src="./img/keyboard.jpg" alt="keyboard" height="100%" >
+            </div>
+            <div style="display: inline-block;vertical-align: top;width: 700px;padding-left: 40px;">
+                <h1>Product B</h1>
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                    </span>
+                    <input type="text" class="quantity" name="quantity" class="form-control input-number" value="0" min="0" max="100" width="80px">
+                    
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                    </span>
+                    
+                    </div>
+                </div>
+                </div>
+                <br />
+                <input type="checkbox" class="gift_tick" name="gift_tick" onchange="changeTotal()">
+                <label for="gift_tick" style="font-size: 16px;">Please Tick if you want to gift wrap each product </label>
+                
+                <br />
+                <h2 style="display: inline-block;">Price: $ <span class="price" >40</span></h2>
+				<h2 style="display: inline-block; margin-left: 280px;">Amount: $ <span class="full-price">0</span></h2>
+        
+            </div>
+        </div>
+
+        <div id="product" style="margin:10px; background-color: rgb(0,0,0,0.5);padding: 5px;height: 250px;">
+        
+            <div style="display: inline-block; margin: 10px;height: 200px; width: 300px;" >
+                <img src="./img/mobile.jpg" alt="mobile" height="100%" >
+            </div>
+            <div style="display: inline-block; vertical-align: top;width: 700px;padding-left: 40px;">
+                <h1>Product C</h1>
+                <div class="row">
+                <div class="col-lg-4">
+                    <div class="input-group">
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                    </span>
+                    <input type="text" class="quantity" name="quantity" class="form-control input-number" value="0" min="0" max="100" width="80px">
+                    
+                    <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <br />
+                <input type="checkbox" class="gift_tick" name="gift_tick" onchange="changeTotal()">
+                <label for="gift_tick" style="font-size: 16px;">Please Tick if you want to gift wrap each product </label>
+                
+                <br />
+                <h2 style="display: inline-block;">Price: $ <span class="price" >50</span></h2>
+				<h2 style="display: inline-block; margin-left: 280px;">Amount: $ <span class="full-price">0</span></h2>
+        
+            </div>
+        </div>
+
+        <div >
+			<div style="width: 370px;float: right;">
+				<h2>Subtotal: $ <span class="subtotal">0</span></h2>
+
+                <h2>Discount: <span class="discount_name"></span> :$ <span class="discount_amount"></span></h2>
+                               
+                <!-- <h3>No. of product units:<span class="count"></span></h3> -->
+
+                <h5>Gift wrap fee: $1 per unit</h5>
+				<h3 >Gift Wrap fee: $ <span class="gift_fee">0.0</span></h3>
+
+                <h5>Shipping fee: Max 10 units per package,<br />$5 per package</h5>
+				<h3 >Shipping fee: $ <span class="shipping">0.00</span></h3>
+			
+				<h1 >Total: $ <span class="total">0.0</span></h1>
+                <br />
+                <button style="background-color: aqua; float: left;">
+                    <a class="btn" style="font-size: 30px; color: black;">Checkout</a>
+                </button>
+                <br />
+			</div>	
+            <br />	
+	    </div>
+        
+        
+    </div>
+
+
+</body>
+</html>
